@@ -6,7 +6,7 @@
 #' @return A matrix of filtered PCs (not correlated with any covariates supplied by user)
 
 
-filter.pca <- function(PCA, covs, threshold){
+filter.pca <- function(PCA, covs, threshold=0.2){
 	library(tidyverse)
 
 	# ensure the first column is the first covariate

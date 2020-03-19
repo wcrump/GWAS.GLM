@@ -9,11 +9,3 @@ The GWAS.by.GLM package consists of one main function that uses several side fun
 The main function is:
 GWAS.by.GLM
 }
-\section{GWAS.GLM functions}{
-
-GWAS.by.GLM
-make.pca
-filter.pca
-perform.GWA.GLM
-}
-

@@ -1,5 +1,7 @@
 #' Perform GWA by GLM
 #'
+#'
+#'
 #' @param gen.data A numeric genotype matrix/data.frame (rows = taxa, columns = markers).
 #' @param phen.data A phenotype matrix/data.frame (rows = taxa, column = trait scores). Only one trait is permitted.
 #' @param covs A matrix/data.frame of covariates (rows = taxa, columns = covariates)

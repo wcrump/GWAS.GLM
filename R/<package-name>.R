@@ -4,12 +4,6 @@
 #' The main function is:
 #' GWAS.by.GLM
 #'
-#' @section GWAS.GLM functions:
-#' GWAS.by.GLM
-#' make.pca
-#' filter.pca
-#' perform.GWA.GLM
-#'
 #' @docType package
 #' @name GWAS.GLM
 NULL

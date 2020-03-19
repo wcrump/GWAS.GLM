@@ -6,8 +6,8 @@
 #' @param trait The name of the trait
 #' @return A ggplot object Manhattan plot
 
-manhattan_plot <- function(marker_map, pvals, QTN_index = c(), trait = "unknown")
-{
+manhattan_plot <- function(marker_map, pvals, QTN_index = c(), trait = "unknown"){
+	names(marker_map) <- c("taxa", "Chromosome", "Position")
 	marker_map$pvals <- -log10(t(pvals)) # Add pvalues to the data.frame and log10 transform
 
 	marker_map$comb_pos <- marker_map$Chromosome * 1e9 + marker_map$Position

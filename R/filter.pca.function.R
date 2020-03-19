@@ -5,7 +5,6 @@
 #' @return A matrix of filtered PCs (not correlated with any covariates supplied by user)
 
 
-
 filter.pca <- function(PCA, covs){
 	library(tidyverse)
 
@@ -14,22 +13,14 @@ filter.pca <- function(PCA, covs){
 		covs <- column_to_rownames(covs, var = colnames(covs[1]))
 	}
 
-	num.cov <- length(colnames(covs)) #get number of covariates the user input
+	correlation.matrix <- cor(PCA$x, covs)
+	indices <- as.data.frame(apply(correlation.matrix, 2, function(x){x>=0.5}))
+	index.vect <- apply(indices, 2, function(x){which(x)})
 
-	#function to return boolean index of PCs that are highly correlated with user-input covariates
-	filter.pca <- function(PC, covariate){
-		if (cor(PC, covariate) >= 0.5){
-			return(F)
-		}else{
-			return(T)
-		}
-	}
+	PCA$x <- PCA$x[,-index.vect]
 
-	#filter out PCs that are highly correlated with user-input covariates
-	for(i in 1:num.cov){
-		to.filter <- apply(PCA$x, 2, filter.pca, covariate=covs[i])
-		PCA$x <- PCA$x[,to.filter]
-	}
-
-	return(PCA$x)
+	return(PCA)
 }
+
+
+

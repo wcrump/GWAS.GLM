@@ -14,7 +14,7 @@ filter.pca <- function(PCA, covs){
 	}
 
 	correlation.matrix <- cor(PCA$x, covs)
-	indices <- as.data.frame(apply(correlation.matrix, 2, function(x){x>=0.5}))
+	indices <- apply(correlation.matrix, 2, function(x){x>=0.5})
 	index.vect <- apply(indices, 2, function(x){which(x)})
 
 	PCA$x <- PCA$x[,-index.vect]

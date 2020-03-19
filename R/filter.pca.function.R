@@ -4,9 +4,10 @@
 #' @param covs A matrix/data.frame of covariates (rows = individuals, columns = covariates)
 #' @return A matrix of filtered PCs (not correlated with any covariates supplied by user)
 
-library(tidyverse)
+
 
 filter.pca <- function(PCA, covs){
+	library(tidyverse)
 
 	# ensure the first column is the first covariate
 	if (class(covs[,1]) != "integer" & class(covs[,1]) != "numeric"){

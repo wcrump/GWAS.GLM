@@ -7,7 +7,7 @@
 manhattan_plot(marker_map, pvals, QTN_index = c(), trait = "unknown")
 }
 \arguments{
-\item{marker_map}{A data.frame containing marker 'rs', 'chr', and 'pos' (should be in the same order as the GWAS results)}
+\item{marker_map}{A data.frame containing markers with 3 columns: taxa, chromosome, and position (rows should be in the same order as the GWAS results)}
 
 \item{pvals}{The untransformed p-values from a GWAS test}
 

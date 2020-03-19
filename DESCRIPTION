@@ -1,6 +1,6 @@
 Package: GWAS.GLM
 Type: Package
-Title: Perform GWAS by GLM (Title Case)
+Title: Perform GWAS by GLM 
 Version: 0.1.0
 Author: Who wrote it
 Maintainer: The package maintainer <yourself@somewhere.net>

@@ -12,3 +12,7 @@ make.pca <- function(gen.data){
 	PCA <- prcomp(gen.data)
 	return(PCA)
 }
+
+
+# test
+print('beebop')

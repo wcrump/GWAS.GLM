@@ -4,7 +4,7 @@
 \alias{filter.pca}
 \title{Filter out PCs colinear with other covariates.}
 \usage{
-filter.pca(PCA, covs, threshold = 0.2)
+\method{filter}{pca}(PCA, covs, threshold = 0.2)
 }
 \arguments{
 \item{PCA}{The output list from the prcomp() function.}

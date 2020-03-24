@@ -1,2 +1,2 @@
-# GWAS.GLM
+# GWASP
 Perform GWA by GLM

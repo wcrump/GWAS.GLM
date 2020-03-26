@@ -6,6 +6,8 @@
 \title{GWAS.GLM: A package for performing genome-wide associations by general linear modeling.}
 \description{
 The GWAS.by.GLM package consists of one main function that uses several side functions.
+}
+\details{
 The main function is:
 GWAS.by.GLM
 }
